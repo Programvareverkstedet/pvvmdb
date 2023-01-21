@@ -1,0 +1,50 @@
+@startuml
+
+entity "User" as user {
+  id: int
+  --
+  * username: string
+  name: string
+  phone: string
+  external_email: string
+  first_created: date
+  locked: boolean
+  comment: string
+}
+
+entity "Purchase" as purchase {
+  id: int
+  --
+  * _user_id_: int
+  * amount_paid: number
+  * date: date
+  comment: string
+}
+
+entity "Disk Purchase" as disk_purchase {
+  --
+  * size_mb: int
+}
+
+entity "Membership Type" as membership_type {
+  id: int
+  --
+  * name: string
+  * price: number
+  comment: string
+}
+
+entity "Membership Purchase" as membership_purchase {
+  --
+  * _membership_type_id_: int
+}
+
+
+user "1..1" -- "0..*" purchase : makes
+disk_purchase --|> purchase
+membership_purchase --|> purchase
+
+membership_type "1..1" -- "0..*" membership_purchase : is
+
+
+@enduml
