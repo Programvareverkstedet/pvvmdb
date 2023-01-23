@@ -1,16 +1,20 @@
-<?php
-
-include('./db_connect.php');
-
-
-$res = pg_query($dbconn, "SELECT * FROM users");
-if (!$res) {
-    echo "An error occurred.\n";
-    exit;
-}
-
-while ($row = pg_fetch_row($res)) {
-  echo "id: $row[0]  username: $row[1]";
-}
-
-?>
+<!DOCTYPE html>
+<html lang="en" class="has-background-light">
+<head>
+  <?php
+    $title = "PVVMDB";
+    include "includes/head.php";
+  ?>
+</head>
+<body >
+  <?php
+    include "includes/nav.php";
+  ?>
+  <div class="container">
+    <h1 class="title">Welcome to PVVMDB</h1>
+    <p class="subtitle">
+      This application is made to register and manage PVV Membership.
+    </p>
+  </div>
+</body>
+</html>
