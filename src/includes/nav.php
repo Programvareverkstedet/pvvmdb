@@ -4,14 +4,14 @@
       <img src="/assets/logo_black_thicc.png" class="m-0 image is-32x32">
     </a>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
+  <div id="navbar" class="navbar-menu">
     <div class="navbar-start">
       <a href="/" class="navbar-item">
         Home
@@ -27,13 +27,16 @@
         </a>
 
         <div class="navbar-dropdown">
-          <a href="/user.php" class="navbar-item">
+          <a href="/user/index.php" class="navbar-item">
             User Details
           </a>
-          <a href="/paymentphp" class="navbar-item">
+          <a href="/user/import.php" class="navbar-item">
+            Import Users
+          </a>
+          <a href="/payment/index.php" class="navbar-item">
             Payments
           </a>
-          <a href="/quota.php" class="navbar-item">
+          <a href="/quota/index.php" class="navbar-item">
             Quota Management
           </a>
           <hr class="navbar-divider">
